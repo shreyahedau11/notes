@@ -1,0 +1,128 @@
+version worked 
+future version - 1.9 
+
+and 1.8
+
+groovy test cases
+
+features of 1.8
+	# lambda functions(to reduce boiler plate code), java stream(to ).
+
+JBPPM overall idea.
+
+1.5 new feature that are introduced.
+
+
+OOPS questions.
+
+
+collections :
+
+linked list and array list.
+
+set : tree set.
+
+Concurrency API.
+
+Executor class. 
+
+java.util.concurrency.
+
+thread.
+
+Hibernate : query peformance. query optimization. : imp
+Java code optimization : imp
+database query optimization : imp
+
+configuration, datasource, connection, free. logger enabled and what ever query comes in the log you run the same query in the DB.
+
+code review. - sonar check.
+
+spring : AOP.
+
+UI test cases.
+
+
+jenkins and hudson.
+
+
+junit groovy test cases. how do you run the groovy test cases.
+
+java vs groovy.
+
+
+can you call the java class from groovy and vice versa.
+
+QA interaction.
+
+
+
+Tool : GITHUB, bitbucket, confluence, jira,source tree. Selenium use
+
+
+Important technologies : 
+
+maven, ant.
+spring, hibernate, groovy and grails, jenkins, hudson, jsp,servlet, java, junit test cases,mysql,sql server.
+
+memory management
+permgen & heap space
+stack
+
+good code vs bad code
+type erasur
+ArrayList<T> anc = 
+
+stateless
+stateful ex
+
+cross site scripting
+XSS
+
+design patterns
+
+composite key
+2 users have same id, how to access them
+groovy unit tests run on live server
+, run using command propmt
+clasur, how u use it
+groovy's plus points
+soap and rest differences
+wht u do daily
+https
+how to make soap secured
+java version differences
+http error codes
+hibernate performance improve
+callable statements
+Just as a Connection object creates the Statement and PreparedStatement objects, it also creates the CallableStatement object,
+which would be used to execute a call to a database stored procedure.
+callable statement
+
+
+Maven uses a plugin called "surefire" to run unit tests. The default configuration of this plugin compiles and runs all classes in src/tets/java 
+with a name matching *Test. You can run the tests on the command line like this
+
+mvn test
+
+class loading
+merge and update
+hibernate performance
+type erasure
+prepared and collable statement
+
+Read
+Java
+Spring
+Hibernate
+Database
+Webservices - SOAP & REST
+SOAP - how to make it secured
+
+Type Erasur
+Class Loading
+Groovy- clauser
+JUnit test cases
+Groovy test cases
+HTTPS
+Design Pattern

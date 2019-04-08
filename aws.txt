@@ -1,0 +1,36 @@
+amazon
+shreya.hedau@softwebsolutions.com
+p@ssw0rd
+
+IAM users sign-in link:
+https://661558623793.signin.aws.amazon.com/console 
+
+account alias- shreyahedau
+
+2 users created (password is auto generated)
+shreya
+shreya11 
+________________________________________________________________________
+S3
+
+- provides secure , durable, and highly-scalable object storage.
+s3 is easy to use, with simple web services interface
+ to store and retrieve any amount of data from anywhere on the web.
+
+s3 is object based storage.
+	- allows us to upload files.
+	- this is unlimited storage (pay for your storage)
+	- files are stored in Buckets(it is just a folder.)
+	- s3 is a universal namespace. bucket name must be unique globally.
+	 cause it is going to create a domain name.
+	https://s3-<region>.amazonaws.com/<bucketname>
+	eg : https://s3-ew-west-1.amazonaws.com/acloudguru
+	- and it will give status code 200 if the upload is successfull.
+
+s3 storage classes/ tiers
+s3 = durable, immediatedly available, frequently accessed
+s3 - IA = durable, immediatedly available, infrequently accessed 
+s3 One Zone-IA = even cheaper than IA, but only in one availability zone.
+glacier - archived data, where you can wait 3-5 hours before accessing
+	(it is used when retrieval time is not bothered much. )
+

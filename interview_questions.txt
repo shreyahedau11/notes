@@ -1,0 +1,608 @@
+##Swagger2
+####OAuth2
+####LDAP
+####Exception Handling
+Large file upload
+##SOA & Angular JS basics
+Proc call
+#AOP
+Eureka cloud
+Zuul & Config server
+Actuator
+--Mokito
+####Command line runner & Application Runner
+RabbitMQ
+##War file from Jar
+Executor
+Profile management
+###JPA & jdbc
+Cache---
+Interceptor
+Interceptors & Jackson
+Mobile * Xml
+Transaction Management
+SSL integration
+Cross origin request handling
+Hikari conn. pool
+Content negotiation
+Batch
+SOAP
+Rest Template
+Multiple DB connections  ###https://stackoverflow.com/questions/30362546/how-to-use-2-or-more-databases-with-spring
+PATCH mapping
+
+
+tmobile interview prashantScreen Recording (1-24-2018 4-57-05 PM) ---  shaffic
+
+- how do you define a spring boot as a rest service?
+	## using @RestController.
+- did your service need any database?
+	- 
+- security mechanism u used?
+- (Ans - OAuth2. who was OAuth provider?)
+		- 
+- How do u convert data from database to json?
+	- how do you do that?
+		# we get data in Object so we can convert that object
+			       // Object to JSON String
+			        String jsonStr = mapper.writeValueAsString(user);
+		
+-Can you filter the data using jackson parser? if yes how do you do that? which class is used for that?
+			
+- Can u parse Array within an array? how can you parse it?
+- Endpoint to retrieve 2 different sets of data. 2 columns from mobile and 3 cols for desktop.
+- service need to return more data like 1 million. 
+- create a report and export to pdf/xml.(We cannot do paging) so how can you handle it when it returns 1 million records. 
+- if i want to transfer a large file. then how do you do that?
+- data types you have handled? (Complex datatypes a service can handle)
+- a proc receiving table type parameter.
+--------------------
+ - difference between spring and spring boot.
+	rate yourself in spring boot?
+ - we want a service. to get the data from db?
+	Ans - add dependencies we want to use.
+		- spring starter.
+		- spring jpa
+	    - create entity
+			- controller class......
+
+- how do you convert an object to jsonString with jackson.
+
+	###  ObjectMapper mapper = new ObjectMapper();
+        // Object to JSON String
+        String jsonStr = mapper.writeValueAsString(user);
+	%%% 
+        ObjectMapper mapper = new ObjectMapper();
+	//from JSON String to Object
+        User obj = mapper.readValue(a, User.class);
+
+
+- Exact difference between xml and json?
+- can we use 
+- what do you mean by DI?
+	- a s/w design pattern to develop loosely coupled code
+- what do you mean by constructor based and setter inject and when to use?
+
+_________________________________________________________________________________________________________________________
+Sharad -Screen Recording (5-15-2018 8-20-55 PM) ---- Mathew Sibi, SellaMutthu MaheshKannan
+how do you enable auth?
+- how do you capture auth token?
+	- passing in headers
+- what is annotations?	
+	- is a syntatic metadata
+- how do you use log? 
+	- either by using log4j or lombok
+- how do you connect to database.
+	- by configuring in application.properties
+- have u use row method?
+	it contains the rows that satisfy the conditions of the query
+- what is streams?
+	- what is the scenario we go for stream?
+- handle large dataset.
+	Ans - datalevel caching.
+- how do you handle audit?
+- how u have used junit testing?
+__________________________________________________________________________________________________________________________
+(half) Viren Jaydip Screen Recording (5-23-2018 8-25-09 PM) --- sanad , shaffic
+filter large records - like 1 Million 
+	1st filter record based on department 
+	2nd filter record based on salary package
+- how many filters you will use?
+	- will use 2 filter or 1. like if u will write 2 criteria or accomodate into 1.?
+- what r methods used for connection pooling?
+	- properties that u define.
+	- what are the 3 different properites required for connection pooling.
+- what is connection pooling?
+- what is the difference between intial size and max size
+- dynamically increase the size of connection pool?
+- rest service?
+ 
+
+___________________________________________________________________________________________________________________________
+ArpitKhatri-Screen Recording (4-18-2018 9-10-03 PM) ---- kaushal, Sanad, Shaffic
+
+- how to make stored procedure, how to call using hibernate and jpa.
+- How can you convert normal application to Spring boot application 
+- what is the use of bootstrap.property
+- have you worked with Eureka directory
+- what selenium version
+- checked exception vs unchecked ?
+	# checked exception are compile time exception
+	# unchecked exception are runtime exception 
+		- exceptions under Error and RuntimeException classes are unchecked exceptions
+
+- when to extend Extend thread and when to extend throwable.
+- how to create thread, (by extending the thread and implementing Runnable).
+- so when to use extend thread and when to implement Runnable.
+- fatest insertion of records. which collection to use.
+- difference between hashmap and hashtable.
+- how to handle concurrentModification Exception in list.
+- hashtable has method syncronized? / how to make map syncronized.?
+- if u have a list if someone is trying to update data.. then when exception comes conncurent modification exception. then how to solve it.
+- do we have any synchrozied arrayList.
+- copy on write arrayList.
+- how do u convert arrayList to Array
+- how do you convert json to String.
+- java8 stream
+- how to implement stream  for a list.
+- if want to apply multiple filters how to apply it
+- what is the difference between component.(UML diagrams)
+
+(selenium questions--)
+.
+.
+..
+___________________________________________________________________________________________________________________________
+Vikas_Madhvi_Screen Recording (3-9-2018 9-51-36 PM) shaffic, sumit
+- for a basic spring boot application what all is required?
+- how to use external tomcat
+- have u used noSql database?
+- have u called in stored procedures
+- how do u create stored procedures? and how u call? what are the steps?
+- where do u deploy ur services?
+- u have http service and want to integrate ssl certificate? how do u integrate?
+LDAP authentication
+- if you want to enable ldap authentication what are the steps to implement?
+- Command Line Runner and Application Runner(Interface)
+- how do you implement AOP for transactions.
+	- how do you implement for login?
+- what is the syntax? what is the difference between Advice and pointcut.
+	-where do you write Advice and where do you write pointcut.
+- what is jointpoint?
+- read the firstname column from table repository from MYsql database
+	
+ --- 
+how do you manage transactions in spring boot controller.
+	
+- if not using spring boot or spring specific thing how transactions are taken care using traditionally , 
+- difference between microservices and SOA
+- how do you enable connection pool for maximum no. of connection?
+- spring boot application with mysql database.
+- why u use putty or winsp?
+	- why u use putty especially.
+-  have you consumed a webservice?
+	- what are the methods u have used for rest template.?
+- have u used lombok?
+- have u used any bean mappings?
+  - to convert one object to another object?
+- what are the steps to use json object to string?
+- how to read json object.
+- what is your sprint duration for agile model.
+- have you worked on procedure creation?
+- Junit
+	- we have write an writen a query. how to write a junit query.
+	- find employee name  by employeeId.
+	- i have a controller. find department by EmployeeId 
+		- department does not have employeeId just have employeeID.
+
+	- where do use mock where u use mockmvc?
+- u have a normal service and want to convert into microservice.
+	- what are the steps u follow.?
+- how do u track ur multiple microservices.?
+- have u used config server?
+- where do u store environment variables?
+- what is service discovery?
+______________________________________________________________________________________
+PrashantGoswami-Screen Recording (5-4-2018 8-28-38 PM)
+sibi, sanath, maheshkannan
+
+- how do u create rest service using spring boot?
+	# using @RestController
+- how do u pass parameters?
+	# using @RequestBody in method
+- if u r using jpa? how do u call a stored procedure?
+	# using createNamedStoredProcedureQuery(procedure_name)
+- if u r not using jpa or hibernate? how to call database?
+	#
+- how do u call stored procedure from jdbc
+- have u called otherservice from ur rest service?
+- have u implemented any security in ur webservice?
+	- any authentication techniques?
+- have u consumed any webservice which were secure?
+- if u had to implement any security for ur webservice what would u use?
+	- would u use basic authentication?
+- have u used java streams?
+	- u can also use for?
+	- what are the benefits?
+		- how can u increase the performance using stream api?
+- can u use stream to combine and get the new model?
+- from the list u r using jdbc template?
+- how do u deal with large no. of data? keep the transaction time minimum?
+- is there any way to compress and decompress data in java?
+- have u used interceptors?
+- have u handled localization?
+	- how can u convert one time zone to another time zone?
+- what is the best practise to store the data for multiple time zones?
+- what are the different ways of caching?
+- is there a limit to caching? how much limit do u cache?
+
+________________________________________________________________________________________________
+
+Can we overload main method ?
+yes - by changing the argument type/or no.
+
+Constructor returns a value but, what ?
+	A constructor returns a new instance of the class it belongs to, even if it doesn't have an explicit return statement.
+Can we create a program without main method ?
+	yes, by using static block
+What are the 6 ways to use this keyword ?
+Why multiple inheritance is not supported in java ?
+	- cause of diamond problem.
+Why use aggregation ?
+	- having HAS-A relation
+Can we override the static method ?
+	no
+What is covariant return type ?
+	yes, when one overrides a method, the return type of the overriding method is allowed to be a subtype of the overridden method's return type. 
+	
+What are the three usage of super keyword?
+	super can be used to refer immediate parent class instance variable.
+	super can be used to invoke immediate parent class method.
+	super() can be used to invoke immediate parent class constructor.
+
+Why use instance initializer block?	
+	is used to initialize the instance data member. It run each time when object of the class is created.
+
+What is the usage of blank final variable ?
+	A final variable in Java can be assigned a value only once, we can assign a value either in declaration or later.
+
+What is marker or tagged interface ?
+	Marker interface in Java is an interface with no fields or methods.
+	In simple words, empty interface in java is called marker interface. 
+	Example of marker interface is Serializable, Cloneable and Remote interface
+
+What is runtime polymorphism or dynamic method dispatch ?
+	Dynamic method dispatch is a mechanism by which a call to an overridden method is resolved at runtime. 
+
+What is the difference between static and dynamic binding ?
+	Static binding happens at compile-time while dynamic binding happens at runtime. 
+	Binding of private, static and final methods always happen at compile time since these methods cannot be overridden
+
+How downcasting is possible in java ?
+	 downcasting means casting to a subtype
+
+What is the purpose of private constructor?
+	in Singleton (don't want to that class to be further instantiated over ) 
+
+What is object cloning ?
+	to create exact copy of an object
+	If original object has any references to other objects as fields, then only references of those objects are copied into clone object, copy of those objects are not created
+	that means any changes made to those objects through clone object will be reflected in original object
+
+(shallow coping)
+-- cloning, changing anything in clone object will also change in orginal object.
+		Shallow copy is preferred if an object has only primitive fields.
+		Shallow copy is fast and also less expensive.	
+
+(deep copying)
+-- it also changes the referene of the object.
+	- so any changes made in copied object does not change in the original object
+
+_____________________
+3 Ways to initialize object
+There are 3 ways to initialize object in java.
+
+By reference variable
+By method
+By constructor
+________________
+What are the different ways to create an object in Java?
+There are many ways to create an object in java. They are:
+
+By new keyword
+By newInstance() method
+By clone() method
+By deserialization
+By factory method etc.
+_________________________________________________________________________________________
+
+
+-----------------------Navneet Dubey---------------------------
+1 whats your career experience ?
+2 Tell me steps to read 25gigs of data into mongoDB
+3 What is mean by retaintion in kafka ?
+4 how long a message can be retain in kafka ?
+5 how do you implement a listener in kafka ?
+6 how would you listen a topic ?
+7 for example SH2(Service Health) is creating a new topic and it is been subscribed by another application , may be like peer or some other , how would pier will listen to that topic ?
+8 What is the use of zoo keeper?
+9  you guys using external kafka or some internal kafka ?
+10 Have you created any spring boot application ?
+11 what is diff between repository , service and component ?
+12 If I ask you to create spring boot application , connecting to mysql db ,and crud points , how much time you will take to create application.
+13 How would you implement of a stream of 60k of data , to filter based on two columns , like column A and column B and group by Column C , how will you do it ?
+14 How would you implement sorting then ?
+15 In stream how can you implement sorting ?
+16 If you given an application to create , what all thing you will take care ? (Asking project structure)
+17 How would you write a test cases ?
+18 How do you test post or service call using mockito ?
+19 How would you validate your request ?
+20 How would you validate the request data (checking weather all fields are coming or not) at spring side ?  scenario - (Some of the Employees object is missing in request)
+21 How can we instantiate connection based on the value that I passed?
+
+-----------------------Viren Sir---------------------------
+
+1 what is the difference between java7 and java8
+2 which part of java 8 you have used ?
+3 for example you have 1,00,000 of records (Employees recored ) you want to filter based on  two criteria like department , and salary package so how do you implement two filters ? In this case how many filters will you use ? so like will you use two filters or you will accomodate both filters in single one? 
+4 Do you know connection pooling ? what are the methodologies you have used for connection pooling so far ? what are the properties you had defined ? what are the three different properties that you required for connection pooling? what exactly the connection pool ? what is difference between initial size and maxsize in connection pool configuration ?
+5 What happen when you have 100 connection pool and all are used , and 101th request come  then how it will react?
+6  Is there a way we can dynemic create the connectin pool ?
+7 have you implement resful services ? using jersy or spring boot ? 
+8 For crud operation application in spring boot how long you will take time ? how will you implement it ? 
+9 what are the APIs you have used for JSON Parsing ?
+10 How do you convert object to String? for XML parsing ?
+11 What have you worked on kafka ? have you implemented kafka ? how do you subscribe ? How do you know there is data came ?
+12 can we connect multiple database in spring boot ?
+13 To talk to rest api which java api you have used ? what other method you have used ?
+14 How did you setup auth on your service ? How did you secure your servicesd? who was the provider for the security ?
+15 Have you communicate the database using storedProcedures ?
+16 Hav you worked on front end side of things ? what is the use of boot strap ? How will you do responsive with out any css framework ?
+
+--------------------------J D Sir-------------------------
+
+1 How much do you rate your self in spring boot ?
+2 Have you worked on connection pool ?
+3 what are the basic steps we need to follow to implement connection pool ?
+4 have you connected to mysql using repository Pattern ?
+5 How can we use multiple database connection establishment ?
+6 Have you worked with any JSON parsing api ?
+7 what method you have usded in Jackson ?
+8 How will you sort a collection in java using lambda expression ?
+9 Have you worked with any cache system ?
+10 Can you use repository pattern with mysql server ?
+11 How is your webservices get secured ?
+12 How do you make ajax call in jquery ?
+13 have you written any Junit test cases ? what are the framework that you are using for that ? are you using plain junit or are you combining with any other framework ?
+14 lifecyle methods for junit ? have you created any setup method in Junit ? (tear down method).
+15 where do you establish connection in test cases ? What is the connection required in all the test cases , do you create every time ?
+
+--------------------------Vikas Verma-------------------------
+
+1 Which version of spring boot you were working on ?
+	- 2.0.0 Release
+2 For basic spring boot application what is required ?
+	- we need add dependencies as starter parent
+
+3 How do you run a spring boot application without tomcat dependency?
+	- externally deploying our application in tomcat
+
+4 What configuration should I made if I want to use External tomcat ?
+	- spring-boot-starter-web have inbuild tomcat so we need to exclude that tomcat and deploy it on tomcat.
+
+5 Have you worked on any template engine like tymleaf , freemarker ?
+	- no i haven't worked any.
+
+6 Have you worked on spring data ? what have you used in spring data ?
+
+7 Have you used JDBC template ? Have you used JDBC Template or you have used hibernate template ?
+	- yes
+
+8 How do you call procedure through spring?
+	- as i have used hibernate to call a stored procedure, we have to first make the object of StoredProcedureQuery and call it will createNamedtoredProcedureQuery("")
+	
+9 Are you able to create storedProcedures on mysql ?
+	- 
+10 Where you deploy your services ?
+	- we were deploying our 
+11 Lets say you have http service and you want to add ssl certificate , then how do you implement ssl certificate in spring boot application ?
+	-
+12 Have you heard about LDAP authentication ? if you want to enable LDAP Authentication in spring boot app , what are the steps ?
+		- we can use Ldap authentication by enabling the the ldapauthentication in overriden configure method of WebSecurityConfigurerAdapter.
+13 Have you heard about commandLineRunner and applicationRunner ? What are they ?  what is difference between them ? 
+		- they are interface that are executed after application context is loaded and before spring application run.
+ 
+14 Have you worked on AOP ? How do you implement AOP for transactions ? How did you implemented using logging?
+		- is a pardigram used to increase modularity of an application by seprating the cross cuttig concerns.
+
+15 What is the difference between advice and point cuts ? what is mean by join piont ?
+		- advice is the task assigned at a joint point, 
+		- joint point is a point where we want to perform our action
+		- pointcut is the collection of jointpoint and expression where we we perform advice.
+
+16 For example if i want you to connect mysql db and ask you to read one table based on first name , how will you implement repository ?
+		- add the dependencies
+		- spring-web, spring-jpa
+			- then make a model 
+			- controller class
+			and a repository class, where we have to write the our code.
+
+		
+
+--------------------------Madhvi Vaidya-------------------------
+
+1 How do you manage transaction in spring application? If I am not using spring boot , how will you take care of transaction ?
+		- 
+2 what is diff between microservices and SOA ?
+		- microservices are the sevices that are made and run independenly.
+		- SOA 
+3 How do you enable connection pool in spring boot application ? Have you used any other connection pool apart from default one ?
+
+4 If I want you to create mysql db talking to mysql db and fetch employees detail based on first name , how would you implement ?
+
+5 How do you extend you extend your interface with crud repository ? what is exact steps ?
+		- we have to extend CrudReposiotry(<className>, <variable_dataType>, requestEntity, responseType,uri variables)
+6 Which IDE you have used ? 
+		- Eclipse and intellij
+7 what about putty and winscp ?
+		putty - it is a telnet client for ssh
+		winscp - 
+8 have you consumed web services? what are the methods that you have used in rest templat in order to connect ? (RestTemplate)
+		i have used restTemplate to cosume the web service
+		and to connect i have used .exchange(<url>, <httpMethod get/post>,request class);
+9 have you used lombock ?
+		- yes
+
+10 have you used any bean mapping ? what are the steps to convert java object to string using jackson ?
+		- object of object Mapper and .writevalueasString(obj)
+	read?
+		object.readValue(a,<class>)
+
+11 you have worked on agile model  ? what was your sprint length ? 
+	- depends on modules we were working
+
+12 You have worked on any procedure creation on database side ?
+		- yes 
+	
+13 How do you write a unit test for respository findby first name ?  
+		- @DataJpaTest
+
+14 I have a controller which says find department based on employee id , department table doesnt have employee id ,it has only employee name is stored in department .  
+   how do you write a Junit test cases for repository and service ?
+
+
+15 where do you mock mvc and where do you use mock ?
+16 you have normal service and you want to convert it to micro service , what will be the steps?
+	- indentify the modules. and make the modules independent and 
+17 how will you track your microservices ?
+	- service discovery with Eureka
+18 have you used config server ? where do you store your environment specific variables ?   
+	- 
+19 have you used any service registry like Eureka  ? 
+20 what is service discovery ?
+21 do you have any UI knowledge ? 
+
+----------------------------Arpit Khatri----------------------------
+
+1 where were the services deployed  , like VM or cloud ? 
+2 which steps you had followed to create web services ?
+3 How your service was talking to backend database ?
+4 Did you used stored procedure in mysql ?
+5 How do you call the stored procedure using repository using JPA ? 
+6 How do you create spring a spring boot application from a normal application ? 
+7 what is the use of bootstrap.properties ?
+8 Have you worked with Eureka server service registry ?
+9 What is the latested version you have used in salinium ?
+10 Can you tell me about checked exception and unchecked exception ?
+11 How can you create an custom exception ?
+12 What is diff between runtime exception and exception ?
+13 Have you worked with thread ? how can you create a thread ?
+14 Which is the best way to create thread ?
+15 If I want to insert 10000 records which collection I should go with ?
+16 What is the difference between HashMap and HashTable ?
+	- hashmap null keys/values are not allowed
+		- 
+
+______________________________________________________________________________
+
+different ways to connect to database.
+		- there many ways. 
+			like jdbc template, hibernate or jpa 
+		but i was using jpa to connect to database
+				
+how do u map result set into the model
+	- in hibernate and Jpa we can map the result to it's entity directly by providing its class.
+
+like if db is returning 100k records
+	- in that case i'll use scrollableresult
+	then will u map each row?
+
+i have 2 datasources i want to combine 2 dataset and give another map
+
+
+how do u create a thread.
+	- we can internally create the thread.
+we have controller that uses some endpoint and want to process that request. how will do that?
+	- interceptor or requestfilter
+
+have u used any logging mechanism
+
+error log. 
+how u used interceptor and request filter,.
+
+- is it gauranteed that all this methods will be executed.
+	- exception in preHandle.
+- how do u implement the filter.
+	- extend the filter and override the doFilter method.
+	- how do u register that filter.
+		- we register that filter in web.xml
+			<filter>
+  				  <filter-name>CorsFilter</filter-name>
+   				  <filter-class>com.howtodoinjava.examples.cors.CORSFilter</filter-class>
+			</filter>
+ 
+			<filter-mapping>
+  				  <filter-name>CorsFilter</filter-name>
+   				  <url-pattern>/*</url-pattern>
+			</filter-mapping>
+
+- have u worked with spring cloud
+- what do u know abt zuul 
+- have u worked with Eureka.
+- what is the need of bootstrap.properties
+- what all the properties we can keep in bootstrap.properties
+- what are the ways to connect oracle in spring boot.
+	- what are the steps.
+- explain me about jdbc template.
+- how the transaction held in spring boot.
+
+have u worked in any frontend?
+what have u used in jquery.
+- u have made a sercive call from front end.
+- how u pass the authentication in that scenario.  
+- how do u handle that token in service side.
+- how to u enable CORS domain.
+- have u worked on CSS
+- have u created unit testing in java
+- how u mock the service call
+
+
+_______________________________________________________________________________________________
+Pankaj Patel
+
+- how do u create non-web application in spring boot.
+- u have 100k data and another 200k and combine those data. how do u do that.?
+- i have a controller. and want to do process the request.
+- recently which spring boot version u have used?
+- which all database u have used?
+- how can we connect each database.
+	- what are the different ways. which is the best way?
+- have u worked with connection pooling
+- have u worked with Hikari?
+	- what are the steps to use hikari
+- what are the minimal values u have to provide in connection and pooling
+- what is the latest spring framework version u have used with spring-boot.
+- what are the benefits 
+- what spring cloud comprises?
+- what is the use of Hystrix
+- have u worked with load balancing ?
+- have u worked with authentication?
+- can't u use spring security in normal services?
+- how do u map database result into the model.
+
+__________________________________________________________________________________________________________________________ 
+
+Netflix Eureka : for Service discovery
+Consul or Config Server : for saving configurations in environment base on 12 factors
+Zuul : for Intelligent and programmable routing
+Netflix Ribbon : for Client-Side Load Balancing
+Zipkin : for tracing
+Turbine : for metrics aggregation
+Netflix Feign : for Declarative REST API implementation
+Hysterix : for circuit breaker (one of the EIP patterns)
+RabbitMQ (Spring-AMQP) or Kafka (Spring-Kafka and Kafka Stream) for having asynchronous communication style
+Grafana + Prometheus + Prometheus-jmx-exporter for monitoring system
+Docker : for virtualization and container base architecure
+Docker Swarm or Kubernetes : for scalability, automation and Container Management
+note : Prometheus is a time-series database (including monitoring features) you can also use InfluxDb or Graphite instead of it.
+

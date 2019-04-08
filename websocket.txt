@@ -1,0 +1,8 @@
+websocket is used for communication
+	
+traditional approches were. we were having http connection.
+	- it was unidirectional
+	- Half duplex - User requests for a response and the server then serves it to the client.
+multiple tcp connections - for each request a new TCPsession is needed to be established.
+	and then closed after receiving the response.
+Heavy- normal http request and response require exchange of extra data b/w client and server.

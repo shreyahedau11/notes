@@ -1,0 +1,8 @@
+blockchain is a tecchnology.
+- no body can change record without anyone knowing.
+- as it is immutable in nature, the blockchain serve as a trustworthy database.
+
+problems solved
+- solved double spending problem.
+- first banks need to keep track of the money in everybody's account. so that no body can spend twice.
+

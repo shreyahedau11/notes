@@ -1,0 +1,47 @@
+	public static void main(String args[]) throws Exception 
+	{		
+		String url = "http://104.215.116.19:7008/api/v1.1.1/firmware-download/EEF02907-B1B9-4460-B535-3EC8E03473CC.enc";
+//	    downloadUsingNIO(url, "C:\\Users\\shreya.hedau\\Documents\\Downloads\\hello.zip");
+            downloadUsingStream(url, "C:\\Users\\shreya.hedau\\Documents\\Downloads\\hello.zip");
+            System.out.println("done");
+//		System.out.println(HttpUtil.getHttpUtil().doGet("http://104.215.116.19:7008/api/v1.1.1/firmware-download/EEF02907-B1B9-4460-B535-3EC8E03473CC.enc",
+//				null, headers, ApiResponse.class, false, false));
+		
+	}
+	
+	  private static void downloadUsingNIO(String urlStr, String file) throws IOException {
+	        URL url = new URL(urlStr);
+	        ReadableByteChannel rbc = Channels.newChannel(url.openStream());
+	        HttpURLConnection myURLConnection = (HttpURLConnection)url.openConnection();
+	        String basicAuth = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImlkIjoiMkZDODUxMEQtRjBBMS00ODc5LTlCODctMTU5MjZBQ0QwREZBIiwiY29tcGFueUlkIjoiOTY3RTBEMUEtMTExQS00MUJDLUFGMEEtRThBNTRFMDg0NURDIiwicm9sZUlkIjoiRTI5NjE0QUMtNUJFRS00RDU2LTkwRjYtNDUyMzNGNjQ4NzdGIiwicm9sZU5hbWUiOiJGbGV4Y28gQWRtaW4iLCJjcElkIjoiRkxDMDAxIiwiZW50aXR5R3VpZCI6IjVDQkYyQTA5LTY2MTUtNDc2Ni05OTc2LUUzMDk3ODhCRTc3MSIsImlzU2VydmljZUFjY291bnQiOmZhbHNlLCJsYXN0UGFzc3dvcmRVcGRhdGVkRGF0ZSI6bnVsbCwic29sdXRpb25HdWlkIjoiQUNEREM0OTUtQkEzOS00NjhCLTkxMjYtODU0RDYwMjAwOEJCIiwic29sdXRpb25LZXkiOiJSVEkyUmpnNU1EVXRRMFE0T1MwME1rSkNMVUkzUkRRdE5qZ3dOalpDUlVSRE0wWkRMV0ZqWTJWemMwdEZXUzA0Y204NGR6aDRjekJxIn0sImV4cCI6IjIwMTgtMDgtMTZUMDY6NTU6NTEuMTAyWiJ9.xWZc6j2y6YLVZLUvg5PoGwYY6Pg6lCaUYwgzVJdDER0";
+	        myURLConnection.setRequestProperty ("Authorization", basicAuth);
+	        myURLConnection.setUseCaches(false);
+	        myURLConnection.setDoInput(true);
+	        myURLConnection.setDoOutput(true);
+	        
+	        FileOutputStream fos = new FileOutputStream(file);
+	        fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
+	        fos.close();
+	        rbc.close();
+	    }
+	  
+	   private static void downloadUsingStream(String urlStr, String file) throws IOException{
+	        URL url = new URL(urlStr);
+	        HttpURLConnection myURLConnection = (HttpURLConnection)url.openConnection();
+	        String basicAuth = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjp7ImlkIjoiMkZDODUxMEQtRjBBMS00ODc5LTlCODctMTU5MjZBQ0QwREZBIiwiY29tcGFueUlkIjoiOTY3RTBEMUEtMTExQS00MUJDLUFGMEEtRThBNTRFMDg0NURDIiwicm9sZUlkIjoiRTI5NjE0QUMtNUJFRS00RDU2LTkwRjYtNDUyMzNGNjQ4NzdGIiwicm9sZU5hbWUiOiJGbGV4Y28gQWRtaW4iLCJjcElkIjoiRkxDMDAxIiwiZW50aXR5R3VpZCI6IjVDQkYyQTA5LTY2MTUtNDc2Ni05OTc2LUUzMDk3ODhCRTc3MSIsImlzU2VydmljZUFjY291bnQiOmZhbHNlLCJsYXN0UGFzc3dvcmRVcGRhdGVkRGF0ZSI6bnVsbCwic29sdXRpb25HdWlkIjoiQUNEREM0OTUtQkEzOS00NjhCLTkxMjYtODU0RDYwMjAwOEJCIiwic29sdXRpb25LZXkiOiJSVEkyUmpnNU1EVXRRMFE0T1MwME1rSkNMVUkzUkRRdE5qZ3dOalpDUlVSRE0wWkRMV0ZqWTJWemMwdEZXUzA0Y204NGR6aDRjekJxIn0sImV4cCI6IjIwMTgtMDgtMTZUMDY6NTU6NTEuMTAyWiJ9.xWZc6j2y6YLVZLUvg5PoGwYY6Pg6lCaUYwgzVJdDER0";
+	        myURLConnection.setRequestProperty ("Authorization", basicAuth);
+	        myURLConnection.setUseCaches(false);
+	        myURLConnection.setDoInput(true);
+	        myURLConnection.setDoOutput(true);
+	        
+	        BufferedInputStream bis = new BufferedInputStream(myURLConnection.getInputStream());
+	        FileOutputStream fis = new FileOutputStream(file);
+	        byte[] buffer = new byte[1024];
+	        int count=0;
+	        while((count = bis.read(buffer,0,1024)) != -1)
+	        {
+	            fis.write(buffer, 0, count);
+	        }
+	        fis.close();
+	        bis.close();
+	    }

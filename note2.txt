@@ -1,0 +1,37 @@
+amazon
+shreya.hedau@softwebsolutions.com
+p@ssw0rd
+
+IAM users sign-in link:
+https://661558623793.signin.aws.amazon.com/console 
+
+account alias- shreyahedau
+
+2 users created (password is auto generated)
+shreya
+shreya11 
+________________________________________________
+angular 
+- demo for anguar material table
+- demo for maps
+- simple form insert and also with mat-form-fiels
+- routing demo
+- Input output parameters
+- custom pipe demos
+- validation using angular template
+- validation using reactive
+
+- interceptors
+- conatainChild
+- ViewChild/ ViewChildren
+- share Component with different modules
+
+--------------------------------------
+interceptors
+ can be used implementing httpInterceptor
+ - and overridding intercept.
+- 
+
+------------------------------------------------
+
+flow

@@ -1,0 +1,59 @@
+Exception : 
+	# checked exception are compile time exception
+		- checked excpetion are needed to be handled by the calling method(all the methods that are using that method)
+		- either by using try, catch or by throws.
+	# unchecked exception are runtime exception 
+		- exceptions under Error and RuntimeException classes are unchecked exceptions
+		- this errors are not handled by the parent method.
+SOA
+	is a collection of services, which communicate with each other.
+	it involves either simple data passing or it involves 2 or more services cooridinating some activity.
+	it uses messaging middleware to communicate with other service on different platform.
+
+AOP
+	it is used for cross cutting concerns like
+		- logging , transaction(open.connection  ----- close connection) this things are there is all the classes so when there is a little change
+			then we have to change in all the classes
+		- so here we can make a class and tell them where to execute. either before or after.
+			
+			there are many terminologies used.
+		#	@Advice is something what things we have to perform
+				- we have 
+					@beforeadvice
+					@afteradvice 
+					@aroundadvice
+					@throwsadvice
+			
+		#	@jointpoint is the point where we want to perform advice
+
+		#	@pointcut is the combination of jointpoint. It has expression where we want to perform the advice.
+
+		#	@aspect is applying the advice on pointcuts
+
+		#	Weaving : this thing can be done in 3 ways.
+				compile time - inject the byte code of the advice at joinpoint during compile time.
+				class Load time - inject the byte code of advice at jointpointn at class load time.
+				runtime - 
+
+Actuator - it used to check the health of the application to know if the server is up or not.
+
+Command Line runner / Application runner.
+	
+	Command line runner -it is executed 
+			right after the application context is loaded and 
+			right before spring application run
+
+		it can be used by implementing CommandLineRunner
+			- and overriding run()
+			- or using runner() in class.
+				
+Application runner
+	- it is same as CommandLine Runner
+		- the only difference is CLR - uses String array
+			and AR - uses Object
+
+- you can have multiple class implementing command line runner and by giving order.
+
+- Profile management - it is done by adding .active = <property_fileName> in application properties.
+
+

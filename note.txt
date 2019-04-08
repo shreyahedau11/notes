@@ -1,0 +1,773 @@
+mail ids
+hr@softwebsolutions.com, psaccounts@softwebsolutions.com,network@softwebsolustions.com
+
+
+skype
+shreya.softweb@outlook.com
+softweb#123
+
+mail id
+shreya.hedau@softwebsolutions.com
+p@ssw0rd
+
+oms
+http://192.168.3.112/OMS/login.aspx?cnt=%2fOMS%2fdefault.aspx
+shreya.hedau@softwebsolutions.com
+tmp123
+
+http://newmis.softwebsolutions.com/MISV3/login/auth
+
+jira
+https://softwebsolutions.atlassian.net/secure/Dashboard.jspa
+shreya.hedau@softwebsolutions.com
+p@ssw0rd
+
+shared folder
+\\192.168.5.123
+admin
+softweb#123
+shared interview videos
+
+github
+sw-tt-shreyahedau
+Softweb#123
+
+n/w no
+106 107
+
+http://192.168.4.128/Spark/
+________________________________________________________________________________________________________________________
+spring.io
+https://start.spring.io/
+
+--
+How hibernate ensured that the cache is updated.
+-  so when you update some entity through hibernate Session it will invalidate cache entry assocciated with this entity - so cache is always fresh.
+
+How much data will cache, cache?
+
+How long it will cache?
+timeToIdleSeconds enables cached object to be kept in as long as it is requested in periods shorter than timeToIdleSeconds. timeToLiveSeconds will make the cached object be invalidated after that many seconds regardless of how many times or when it was requested.
+
+Let's say that timeToIdleSeconds = 3. Then the object will be invalidated if it hasn't been requested for 4 seconds.
+
+If timeToLiveSeconds = 90, then the object will be removed from cache after 90 seconds, even if it has been requested few milliseconds in the 90th second of its short life.
+
+- Remove certain apis from swagger
+
+
+_________________________________________________________________________________________________________________________
+
+Command line runner
+	- when we want to provide way of initialization.
+	- load some custom configuration or some custom data.
+		it can be done in 2 ways.
+		1.  implements CommandLineRunner 
+			and override run()
+
+		@Override
+   		public void run(String... args) throws Exception {
+        	System.out.println("#####################fee##################");
+    		}
+
+		2. 
+		@Bean
+		@Order(value = 2)
+		CommandLineRunner runner(String hi)
+		{
+			return args -> {
+			System.out.println("hhhhiii");
+			};
+		}
+
+if there are more than 1 class implementing commandline runner then we can give order. eg: order(value = 1)
+
+ApplicationRunner run() will get execute, just after applicationcontext is created and before springboot application startup.
+ApplicationRunner has run() with argument ApplicationArgument. It has convenient methods like getOptionNames(), getOptionValues() and getSourceArgs().
+
+Finally Both of them provides the same functionality and the only difference between CommandLineRunner and ApplicationRunner is
+ CommandLineRunner.run() accepts String array[] whereas
+ ApplicationRunner.run() accepts ApplicationArguments as argument.
+
+
+------------------------------------------------------------------
+SOAP 
+	- simple object access protocol
+	- it is a protocol 
+	- can't use rest
+	- uses services interface to expose the business logic.
+	- requires more bandwidth ans resource than rest.
+	- defines its own secuirty.
+	- soap only have xml for all msgs.
+
+Rest
+	- representative state transfer protocol
+	- it is an architectural style.
+	- can use SOAP web services because it is a concept.
+	- uses URI to expose business logic.
+	- JAX-RS is the java api for Restful web services.
+	- requires less bandwidth.
+	- inherits security messages.
+	- permits different data format such as Plain text, HTML,XML,JSON etc.
+
+-------------------------
+set active profiles
+-Drun.jvmArguments="-Dspring.profiles.active=production"
+- @ActiveProfile
+---<profile>
+        <id>production</id>
+        <activation>
+            <activeByDefault>true</activeByDefault>
+        </activation>
+        <properties>
+            <activeProfile>production</activeProfile>
+        </properties>
+    </profile>
+		
+1) 
+spring.profiles.active=dev
+
+2) 
+@ActiveProfile("dev")
+
+3) 
+<profile>
+ <id>production</id>
+ <activation>
+  <activeByDefault>true</activeByDefault>
+ </activation>
+ <properties>
+  <activeProfile>production</activeProfile>
+ </properties>
+</profile>
+
+4)
+mvn spring-boot:run -Drun.jvmArguments="-Dspring.profiles.active=production"
+
+5)
+System.setProperty("spring.profiles.active", "dev");
+
+6) 
+Or set environment variable on current machine
+--
+using environment variable:
+
+@Autowired
+private ConfigurableEnvironment env;
+...
+env.setActiveProfiles("someProfile");
+--
+in web.xml 
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/app-config.xml</param-value>
+</context-param>
+<context-param>
+    <param-name>spring.profiles.active</param-name>
+    <param-value>dev</param-value>
+</context-param>
+---
+in edit configuration --> VM option -->  -Dspring.profiles.active=test
+_________________________________________________________________________________________________________________________
+##Swagger2
+####OAuth2
+####LDAP
+####Exception Handling
+---	
+Large file upload
+	##https://stackoverflow.com/questions/32782026/springboot-large-streaming-file-upload-using-apache-commons-fileupload
+
+##SOA & Angular JS basics
+Proc call
+#AOP
+Eureka cloud
+Zuul & Config server
+#####Actuator-------- monitoring application like health check, track, refresh
+--Mokito - used for unit testing
+####Command line runner & Application Runner -  
+RabbitMQ---- msg queueing (SOAP based)
+##War file from Jar --- just change the packaging
+Executor--- is a group of threads
+####Profile management--- how to active qa/dev/prod
+###JPA & jdbc - it is an application programming interface. that manages data in application
+Cache--- spring boot default ?
+	
+Interceptors & Jackson --------------------
+Transaction Management ------------ https://dzone.com/articles/how-does-spring-transactional
+SSL integration
+Cross origin request handling
+Hikari conn. pool
+Content negotiation 
+Batch
+Rest Template http://www.baeldung.com/rest-template
+Multiple DB connections  ###https://stackoverflow.com/questions/30362546/how-to-use-2-or-more-databases-with-spring
+PATCH mapping
+
+
+********
+java streams
+	-convert into streams 
+		- List<Integer> myList = new ArrayList<Integer>;
+		myList.add(1);
+		myList.add(2);
+		myList.add(3);
+	// convert list into stream
+	Stream<Integer> myStream = myList.stream()
+---
+	converting array into stream
+	Integer[] myArray = {1,2,3};
+
+	// Array into streams
+	Stream<Integer> myStream = Arrays.stream(myArray);
+
+
+______________________________
+JPA
+ -JPA (Java Persistence API) provides and ORM facility for managing relational tables in Java applications.
+ - there are few implementations of JPA, Hibernate, JDO, EJB etc. 
+ - by using JPA we can fetch,insert, update data more easily.
+ - Like there are several CRUD operations that we want to perform. which is same for all entity
+ - JPA allows us by providing class CrudRepository
+	- we can use it by making repository class interface and extending to CrudRepository<Object whoes repo. we want t o create, Datatype of variable on which we want to operate>
+		eg :
+			public interface topicRepository extends CrudRepository<Topic, String>
+			{
+			
+_______________________________
+ResponseEntity<Foo> response = restTemplate
+  .exchange(fooResourceUrl, HttpMethod.POST, request, Foo.class);
+
+			} 
+
+-----
+jdbc
+	- accessing relational databse using jdbc
+		maven dependency
+			-  <dependency>
+		            <groupId>com.h2database</groupId>
+		            <artifactId>h2</artifactId>
+		           </dependency>
+		configuration in application properties.
+		spring.datasource.url=jdbc:mysql://localhost:3306/springbootdb  
+		spring.datasource.username=root  
+		spring.datasource.password=mysql  
+		spring.jpa.hibernate.ddl-auto=create-drop  
+
+exectueQuery vs executeUpdate vs execute
+
+executeQuery - returns resultset . 
+	     - only used with select query
+
+executeUpdate - returns no. of rows updated, and 0 if no rows affected.
+		- used with non-select queries like ,  insert update, create , alter
+
+execute
+	- returns boolean true if query returns resultset, and false if ntg returned.
+	- used with anytype of sql queries.
+
+Statement
+	- used to exceute normal sql queries.
+	- is prefered when SQL query is to be exceuted only once.
+	- cannot pass parameters 
+	- is slow.
+	- used to execute ddl statements , create, drop, alter etc.
+
+	// Create statement object
+	Statement stmt = conn.createStatement();
+
+	// Set auto-commit to false
+	conn.setAutoCommit(false);
+
+	// Create SQL statement
+	String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(200,'Zia', 'Ali', 30)";
+	
+	// Add above SQL statement in the batch.
+	stmt.addBatch(SQL);
+
+	// Create one more SQL statement
+	String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(201,'Raj', 'Kumar', 35)";
+	// Add above SQL statement in the batch.
+	stmt.addBatch(SQL);
+
+	// Create one more SQL statement
+	String SQL = "UPDATE Employees SET age = 35 " +
+             "WHERE id = 100";
+	// Add above SQL statement in the batch.
+	stmt.addBatch(SQL);
+
+	// Create an int[] to hold returned values
+	int[] count = stmt.executeBatch();
+
+	//Explicitly commit statements to apply changes
+	conn.commit();
+
+****
+	PreparedStatement
+	- used to execute dynamic queries.
+	- used when we want to exceute same query multiple times.
+	- can pass paramters runtime.
+	- performance is better than statement.
+
+	// Create SQL statement
+	String SQL = "INSERT INTO Employees (id, first, last, age) " +
+             "VALUES(?, ?, ?, ?)";
+
+	// Create PrepareStatement object
+	PreparedStatemen pstmt = conn.prepareStatement(SQL);
+
+	//Set auto-commit to false
+	conn.setAutoCommit(false);
+
+	// Set the variables
+	pstmt.setInt( 1, 400 );
+	pstmt.setString( 2, "Pappu" );
+	pstmt.setString( 3, "Singh" );
+	pstmt.setInt( 4, 33 );
+	// Add it to the batch
+	pstmt.addBatch();
+
+	// Set the variables
+	pstmt.setInt( 1, 401 );
+	pstmt.setString( 2, "Pawan" );
+	pstmt.setString( 3, "Singh" );
+	pstmt.setInt( 4, 31 );
+	// Add it to the batch
+	pstmt.addBatch();
+
+//add more batches
+.
+.
+.
+.
+	//Create an int[] to hold returned values
+	int[] count = stmt.executeBatch();
+
+	//Explicitly commit statements to apply changes
+	conn.commit();
+*****
+callable statement
+	-used for stored procedures.
+	- used when stored procedures are executed.
+	-  can pass 3 parameters IN, OUT, INOUT
+	- performance is very high.
+
+
+SOA vs microservices
+OAUTH2, resttemplate, configserver on priority
+--------------------------------------------------------------------------------------
+spring vs spring boot
+ - spring helps to solve the problem of testability.
+IOC and DI is the core.
+ - DI is when we let the framework do the autowired.
+
+
+- configration is repeated always like in 14/15, configuration
+	- brining more intelligence.
+		like
+		- if we see hibernate on class path then auto configure it.
+		- if we see spring-mvc jar configure it automatically.
+			- similarly if it sees spring-mvc it will configure dispathcher serlvet accordingly.
+
+- spring boot startup project.
+	- it will have all the starters,
+	
+- spring boot web application 
+- if we want spring jpa, then it will have spring boot jpa
+
+__________________________________________________
+
+EAR is an Enterprise Application archive and may contain ejb JAR files, WAR files, and RAR (connector) files. 
+	They may also contain third-party libraries - but you have to know how to manipulate the Java extension facilities (e.g. MANIFEST.MF Class-Path directive) to make that work well.
+
+WAR is an Web Application archive and contains JSPs, "normal" HTTP served files (HTML, images, etc.), servlets, tag libraries.
+
+JAR is the "normal" Java Application archive, but in this context it usually contains EJBs instead of code libraries or runnable (e.g. from outside an application container) applications.
+
+______________
+spring boot
+- spring boot parent 
+- spring boot starter-web
+- java version 8 (inside properties) 
+- spring boot plugin
+- create spring boot application launcher.
+
+
+---
+Auto wiring is something that tells the bean needs to be instanciated. spring does it for us using @component (whoes instance we want to create).
+@Autowired for instance.
+
+if it does not find dependency like @component then it will throw an exception.
+if we add the component/service to different package then we need to add @componentScan("<packageName>"), cause 
+bydefault spring boot scans its package where we have @SpringBootApplication
+_____________________________________________
+imp urls
+https://start.spring.io/
+
+_________________________________________________________________________________________________________________________
+1/24 - 3.33
+- how do you define a spring boot as a rest service?
+- did your service need any database?
+- security mechanism u used?
+- (Ans - OAuth2. who was OAuth provider?)
+- How do u convert data from database to json?
+	- how do you do that?
+-Can you filter the data using jackson parser? if yes how do you do that? which class is used for that?
+- Can u parse Array within an array? how can you parse it?
+- Endpoint to retrieve 2 different sets of data. 2 columns from mobile and 3 cols for desktop.
+- service need to return more data like 1 million. 
+- create a report and export to pdf/xml.(We cannot do paging) so how can you handle it when it returns 1 million records. 
+- if i want to transfer a large file. then how do you do that?
+- data types you have handled? (Complex datatypes a service can handle)
+- a proc receiving table type parameter.
+--------------------
+ - difference between spring and spring boot.
+	rate yourself in spring boot?
+ - we want a service. to get the data from db?\
+	Ans - add dependencies we want to use.
+		- spring starter.
+		- spring jpa
+	    - create entity
+			- controller class......
+
+- how do you convert an object to jsonString with jackson.
+
+	###  ObjectMapper mapper = new ObjectMapper();
+        // Object to JSON String
+        String jsonStr = mapper.writeValueAsString(user);
+	%%% 
+        ObjectMapper mapper = new ObjectMapper();
+	//JSON from String to Object
+        User obj = mapper.readValue(a, User.class);
+
+
+- Exact difference between xml and json?
+	- json is more readable 
+- can we use 
+- what do you mean by DI?
+	- DI is the dependency injection which loose couples the class with the object 
+- what do you mean by constructor based and setter inject and when to use?
+	
+
+_________________________________________________________________________________________________________________________
+5/15 - 7:55  ---- Mathew Sibi, SellaMutthu MaheshKannan
+how do you enable auth?
+- how do you capture auth token?
+	### auth token can be captured through header.
+- what is anotations?	
+	### 
+- how do you use log? 
+- how do you connect to database.
+- have u use row method?
+- what is streams?
+	- what is the scenario we go for stream?-
+- handle large dataset.
+	Ans - datalevel caching.
+- how do you handle audit?
+- how u have used junit testing?
+__________________________________________________________________________________________________________________________
+5/23 - 8:19
+filter large records - like 1 Million 
+	1st filter record based on department 
+	2nd filter record based on salary package
+- how many filters you will use?
+	- will use 2 filter or 1. like if u will write 2 criteria or accomodate into 1.?
+- what r methods used for connection pooling?
+	- properties that u define.
+	- what are the 3 different properites required for connection pooling.
+- what is connection pooling?
+- what is the difference between intial size and max size
+- dynamically increase the size of connection pool?
+- rest service?
+ 
+
+___________________________________________________________________________________________________________________________
+4/18 - 8:48 kaushal, Sanad, Safic
+
+- how to make stored procedure, how to call using hibernate and jpa.
+- How can you convert normal application to Spring boot application
+	# 
+- what is the use of bootstrap.property
+- have you worked with Eureka directory
+- what selenium version
+- checked exception vs unchecked ?
+	# checked exception are compile time exception
+	# unchecked exception are runtime exception 
+		- exceptions under Error and RuntimeException classes are unchecked exceptions
+
+- when to extend Extend thread and when to extend throwable.
+- how to create thread, (by extending the thread and implementing Runnable).
+- so when to use extend thread and when to implement Runnable.
+- fatest insertion of records. which collection to use.
+- difference between hashmap and hashtable.
+- how to handle concurrentModification Exception in list.
+- hashtable has method syncronized? / how to make map syncronized.?
+- if u have a list if someone is trying to update data.. then when exception comes conncurent modification exception. then how to solve it.
+- do we have any synchrozied arrayList.
+- copy on write arrayList.
+- how do u convert arrayList to Array
+- how do you convert json to String.
+- java8 stream
+- how to implement stream  for a list.
+- if want to apply multiple filters how to apply it
+- what is the difference between component.(UML diagrams)
+
+(selenium questions--)
+.
+.
+..
+______________________________________________________________________________________________________________________________
+3/13 11:48 shaffic
+how to use external tomcat?
+______________________________________________________________________________________________________________________________
+--- table as parameter to storedprocedure
+--- microservices ---->https://www.youtube.com/watch?v=EpyPFnjue38
+
+auth2 ---->http://www.bubblecode.net/en/2016/01/22/understanding-oauth2/
+javastreams example ----> https://github.com/joeyajames/Java/blob/master/Java%208%20Streams/JavaStreams.java
+https://www.journaldev.com/2774/java-8-stream
+https://zeroturnaround.com/rebellabs/streams-the-real-powerhouse-in-java-8-by-venkat-subramaniam/
+
+A stream represents a pipeline through which the data will flow and the functions to operate on the data
+- stream is an abstraction
+	- it is not a data structure. like list, set, ...
+	- it does not store data.
+	- is a collection of function that can be revaluated 
+	- when don't want we want to mutate the data.
+LDAP
+	- https://www.youtube.com/watch?v=fuG5YziN_xs
+	- https://spring.io/guides/gs/authenticating-ldap/
+
+_______________________________________________________________________________________________________________________________
+view resolver
+https://stackoverflow.com/questions/29953245/configure-viewresolver-with-spring-boot-and-annotations-gives-no-mapping-found-f?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+http://www.baeldung.com/spring-mvc-view-resolver-tutorial
+
+________________________________________________________________________________________________________________________________
+
+AOP 
+#https://www.youtube.com/watch?v=j5JeFZLIa5o
+#http://java9s.com/spring-framework/spring-aop-tutorial-aspect-oriented-programming-part-2
+#https://www.javatpoint.com/spring-aop-aspectj-annotation-example
+
+(aspect oriented programming)
+- helps to seprate the cross cutting concerns like logging, transaction etc.
+	what is cross cutting concerns
+		- the crosscutting concern is a concern which is applicable throughout the application and it affects the entire application. 
+		- For example: logging, security and data transfer are the concerns which are needed in almost every module of an application,
+			 hence they are cross-cutting concerns
+
+eg: 
+	class Bank{
+		
+	private int balance;
+	public void withdraw()
+	{
+		balance= this.balance - amount; // 
+		accountDao.saveBalance(balance)
+	}
+	
+	}
+
+// here the main purpose is to save the balance after with draw.	
+// here we are diluting our main purpose with logging and transaction.
+
+
+this are the methods where advice needs to be applied before and after invocation.
+	- here i want to log before the method execution and then apply transaction before and after the method completion.
+
+- Here what ever we are executing here are Advice and Logger itself a jointpoint.
+- point where are executing the advice is jointpoint 
+
+compile time - inject the byte code of the advice at joinpoint during compile time
+class load time - byte code at class loading time during this class to advice code at joint point
+- target object will be shielded with proxy bean created by spring framework.
+	when ever caller calls the target method. spring calls the proxy bean and understands what advice is to be applied and then that advice will be applied.
+	- this is said to be effective way and spring uses this kind of weaving.
+-----------------------------------------------------------------------------------------
+Unidirectional
+
+@Entity
+@Table(name="EMPLOYEES")
+public class Employee implements Serializable {
+
+
+	@Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="EMP_ID", unique = true, nullable = false)
+    private Long empId;
+ 
+
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="EMP_ID")
+    private EmpDetails empDetails;
+	
+	}
+_______________________
+
+	@Entity
+	@Table(name="EMP_DETAILS")
+	public class EmpDetails {
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="ED_ID", unique = true, nullable = false)
+    private Long edId;
+ 
+ }
+ ***********************************************************************************************
+
+Dirty Checking in Hibernate
+try
+  {
+                       //loading a gender object of genderId = 1
+   Gender gender = (Gender)session.get(Gender.class, new Long(1));
+                       //print the gender naem
+   System.out.println("gender.getName()=======>"+gender.getName());
+                          //modify the gender name
+   gender.setName("female");
+   session.getTransaction().commit();
+   session.flush();
+   
+  }catch(Exception e)
+  {
+   e.printStackTrace();
+  }finally
+  {
+   session.close();
+  }
+In the above client application, gender object is loaded first. and then object state is changed by altering the name  of the object. 
+Here, we are not calling update() , even though object state is written to the database. 
+This is called automatic dirty checking. Hibernate monitors whether any changes in the session objects and automatically synchronizes them to database.
+session.getTransaction.commit() is mandatory. Because, after any modifications, if commit() is not called then data will not be modified in the database eventhough update query is executed.
+ 
+ Bidirectional 
+ 
+	@Entity
+	@Table(name="EMPLOYEES")
+	public class Employee implements Serializable {
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="EMP_ID", unique = true, nullable = false)
+    private Long empId;
+ 
+ 
+ 
+    @OneToOne(fetch = FetchType.EAGER, mappedBy = "employee", cascade = CascadeType.ALL)
+    private EmpDetails empDetails;
+	}
+	
+---------------------------------
+	@Entity
+	@Table(name="EMP_DETAILS")
+	public class EmpDetails {
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="ED_ID", unique = true, nullable = false)
+    private Long edId;
+	
+	 @OneToOne
+    @JoinColumn(name="EMP_ID")
+    private Employee employee;
+ 
+	}
+	
+________________________________________________
+One to many (Bidirectional)
+
+@Entity
+@Table(name="EMPLOYEES")
+public class Employee implements Serializable {
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="EMP_ID", unique = true, nullable = false)
+    private Long empId;
+	
+	
+    @OneToMany(fetch = FetchType.EAGER, mappedBy="employee", cascade = CascadeType.ALL)
+    private List<AssetMgnt> assetMgnt;
+	
+	}
+	
+_______________________
+
+	
+	@Table(name="ASSET_MNGT")
+	public class AssetMgnt implements Serializable{
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="AM_ID", unique = true, nullable = false)
+    private Long amId;
+ 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="EMP_ID")
+    private Employee employee;
+ 
+ }
+ 
+ ********************************************************************
+ 
+ one to many (Unidirectional)
+ 
+ @Entity
+@Table(name="EMPLOYEES")
+public class Employee implements Serializable {
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="EMP_ID", unique = true, nullable = false)
+    private Long empId;
+	
+	
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name="EMP_ID")
+    private List<AssetMgnt> assetMgnt;
+	}
+	
+	______________________________________________
+ 
+	@Entity
+	@Table(name="ASSET_MNGT")
+	public class AssetMgnt implements Serializable{
+ 
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Column(name="AM_ID", unique = true, nullable = false)
+    private Long amId;
+	
+
+____________________________________________________________________________________________________________________________
+How get() methods works internally ?
+What is Hashing ?
+Why there are two Date classes; one in java.util package and another in java.sql?
+Why main() in java is declared as public static void?
+
+_________________________________________________________________________________________________________________________
+
+difference between repo, service and component.
+
+-------------------------------------------------------------------------
+
+Blockchain
+ - data is sent in blocks.
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Things done
+ - IOT sdk (creating webservices and calling other webservices as we want to deliver to 
+	to client making a data generic one)
+
+ - web socket demo.
+ - learning angular - created demos
+ - kalptaru - 
+	- created demo for sse and websocket.
+	
+____________________________________________________________________________________________________________________________
+
+Websocket 
+ - If you want to send a message with a body, you must also pass the headers argument. If you have no headers to pass, use an empty JavaScript literal {}:
+  client.send(destination, {}, body);
+ - 

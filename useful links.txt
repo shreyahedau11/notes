@@ -1,0 +1,126 @@
+
+Spring transactions:
+https://o7planning.org/en/11665/spring-boot-hibernate-and-spring-transaction-tutorial
+
+Java Singletons and Spring Singletons:
+https://javabeat.net/spring-singleton-java-singleton/
+
+Design Patterns used in Spring Framework :
+https://premaseem.wordpress.com/2013/02/09/spring-design-patterns-used-in-java-spring-framework/
+
+Pagination:
+http://www.thejavageek.com/2017/02/26/pagination-spring-data-jpa/
+
+Configuring MySQL with Spring Boot
+https://springframework.guru/configuring-spring-boot-for-mysql/
+
+Token-Based-Authentication 
+https://www.wavemaker.com/learn/app-development/app-security/token-based-authentication/
+
+Java Object to/from Json
+http://www.java67.com/2016/10/3-ways-to-convert-string-to-json-object-in-java.html
+http://www.baeldung.com/jackson-object-mapper-tutorial
+
+Parsing huge data using Jackson
+http://javarevisited.blogspot.in/2015/03/parsing-large-json-files-using-jackson.html
+https://stackoverflow.com/questions/13514570/jackson-best-way-writes-a-java-list-to-a-json-array
+
+json String vs object
+http://benalman.com/news/2010/03/theres-no-such-thing-as-a-json/
+
+To return xml/json both, use content negotiation
+http://www.javainuse.com/spring/spring-boot-content-negotiation
+
+Constructor vs setter injection
+https://www.java4s.com/spring/difference-between-setter-injection-and-constructor-injection/
+
+
+ways to create Thread
+https://www.javatpoint.com/creating-thread
+
+Spring Annotations
+ https://ntechtalk.wordpress.com/
+
+Spring Boot properties files
+https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+
+Exception Handling
+https://www.toptal.com/java/spring-boot-rest-api-error-handling
+
+ http://www.vogella.com/tutorials/JavaConcurrency/article.html
+ http://www.vogella.com/tutorials/JavaConcurrency/article.html#threads-pools-with-the-executor-framework
+
+#Executors:
+ https://docs.oracle.com/javase/tutorial/essential/concurrency/exinter.html
+
+
+https://stackoverflow.com/questions/3984076/what-are-the-advantages-of-using-an-executorservice
+-search for 
+ To run the task by implementing Runnable interface, we must have to create the object of the
+-also see next point
+ The following limitations from traditional Thread overcome by Executor framework(built-in Thread
+
+-for example
+ https://dzone.com/articles/the-executor-framework
+
+#callable example
+ https://www.journaldev.com/1090/java-callable-future-example
+
+#JAVA 8 Features:
+ https://www.journaldev.com/2389/java-8-features-with-examples#iterable-forEach
+
+Logging:
+https://dzone.com/articles/configuring-logback-with-spring-boot
+
+example program cache
+https://dzone.com/articles/spring-boot-and-cache-abstraction
+
+task scheduling
+https://www.callicoder.com/spring-boot-task-scheduling-with-scheduled-annotation/
+
+Actuators
+https://www.dineshonjava.com/spring-boot-actuator-complete-guide/
+
+Log4j
+https://dzone.com/articles/log4j-2-configuration-using-properties-file
+
+jackson streaming
+http://www.baeldung.com/jackson-streaming-api
+
+Pagination
+https://ankushs92.github.io/tutorial/2016/05/03/pagination-with-spring-boot.html
+
+Spring Boot Oath2 SSo
+https://spring.io/guides/tutorials/spring-boot-oauth2/
+
+Login with Google
+https://dzone.com/articles/getting-started-with-google-sign-in-in-spring-boot
+
+fb login
+https://medium.com/@konstantinnalum/spring-boot-facebook-login-authentication-using-oauth-9e242c4c039e
+http://www.baeldung.com/facebook-authentication-with-spring-security-and-social
+git:
+https://github.com/eugenp/tutorials/tree/master/spring-social-login
+
+issues:-
+https://github.com/specious/facebook-cli/issues/17
+while logging in suing facebook
+
+api key AIzaSyBSrdceQP8uRW2Squ89tpFIDp1P8YiFg40
+
+spring social:
+http://www.littlebigextra.com/part-1-authorising-user-using-spring-social-google-facebook-and-linkedin-and-spring-security/
+project creation guide
+https://dzone.com/articles/getting-started-with-google-sign-in-in-spring-boot
+google developers link:
+https://console.developers.google.com/
+
+creating key guide
+https://analytify.io/get-client-id-client-secret-developer-api-key-google-developers-console-application/
+
+DB Maestro:
+https://dzone.com/articles/dbmaestro-devops-for-database-1
+Demo Video:
+https://www.youtube.com/watch?v=mL5jdMCFW-0&feature=youtu.be
+https://www.dbmaestro.com/2011/08/how-to-manage-day-to-day-database-development-using-dbmaestro-teamwork-sidebar/
+
